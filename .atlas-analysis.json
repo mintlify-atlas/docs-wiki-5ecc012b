@@ -1,0 +1,382 @@
+{
+  "projectType": "api-service",
+  "projectName": "Apache Fineract",
+  "projectDescription": "Apache Fineract is a multi-tenant, Spring Boot–based core banking platform exposing a JAX-RS REST API for loans, savings, accounting, and microfinance operations, built as a modular Gradle monolith.",
+  "theme": "maple",
+  "primaryColor": "#c35696",
+  "lightColor": "#1d5e8b",
+  "darkColor": "#faf6fa",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Overview",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "index",
+              "architecture",
+              "repository-layout",
+              "module-system",
+              "multi-tenancy"
+            ]
+          },
+          {
+            "group": "Key Flows",
+            "pages": [
+              "flows/request-lifecycle",
+              "flows/command-processing-flow",
+              "flows/loan-lifecycle",
+              "flows/loan-cob-execution",
+              "flows/external-event-publishing",
+              "flows/authentication-flow",
+              "flows/batch-api-flow",
+              "flows/interest-calculation-flow"
+            ]
+          },
+          {
+            "group": "Configuration & Environment",
+            "pages": [
+              "configuration/application-properties",
+              "configuration/environment-variables",
+              "configuration/global-configuration",
+              "configuration/instance-modes",
+              "configuration/database-migrations"
+            ]
+          },
+          {
+            "group": "Build, Test & Deployment",
+            "pages": [
+              "operations/gradle-build",
+              "operations/buildsrc-plugin",
+              "operations/docker-compose",
+              "operations/kubernetes",
+              "operations/integration-tests",
+              "operations/e2e-tests",
+              "operations/custom-modules"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Core Platform",
+        "groups": [
+          {
+            "group": "fineract-core",
+            "pages": [
+              "core/overview",
+              "core/infrastructure-core",
+              "core/boot-and-config",
+              "core/api-layer",
+              "core/serialization",
+              "core/exceptions-and-error-handling",
+              "core/domain-base-classes",
+              "core/codes-and-configuration",
+              "core/business-dates",
+              "core/account-number-formats",
+              "core/cache",
+              "core/bulk-import",
+              "core/organisation-monetary",
+              "core/office-staff-holidays",
+              "core/useradministration",
+              "core/batch-api",
+              "core/jobs-api",
+              "core/event-framework",
+              "core/external-events",
+              "core/document-management-core",
+              "core/dataqueries-core",
+              "core/hooks-core",
+              "core/instance-mode",
+              "core/interoperation-core"
+            ]
+          },
+          {
+            "group": "Commands & Audit",
+            "pages": [
+              "commands/overview",
+              "commands/command-wrapper-builder",
+              "commands/synchronous-processing",
+              "commands/handler-provider",
+              "commands/maker-checker",
+              "commands/idempotency",
+              "commands/audit-api",
+              "commands/new-command-framework",
+              "commands/command-jdbc-store",
+              "commands/command-async-disruptor"
+            ]
+          },
+          {
+            "group": "Security (fineract-security)",
+            "pages": [
+              "security/overview",
+              "security/tenant-aware-authentication",
+              "security/basic-auth",
+              "security/oauth2",
+              "security/two-factor",
+              "security/platform-security-context",
+              "security/permissions-and-roles",
+              "security/sql-injection-prevention"
+            ]
+          },
+          {
+            "group": "Database Layer",
+            "pages": [
+              "database/overview",
+              "database/tenant-store",
+              "database/tenant-database-routing",
+              "database/liquibase-changelogs",
+              "database/jpa-and-eclipselink"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Business Modules",
+        "groups": [
+          {
+            "group": "Loan Subsystem",
+            "pages": [
+              "loan/overview",
+              "loan/loan-domain-model",
+              "loan/loan-api-resources",
+              "loan/loan-write-services",
+              "loan/loan-transaction-processing",
+              "loan/loan-schedule-generation",
+              "loan/loan-charges",
+              "loan/loan-products",
+              "loan/loan-delinquency",
+              "loan/loan-reschedule",
+              "loan/guarantors",
+              "loan/interest-pauses",
+              "loan/loan-jobs",
+              "loan/progressive-loan",
+              "loan/progressive-loan-embeddable-generator",
+              "loan/loan-origination",
+              "loan/working-capital-loan"
+            ]
+          },
+          {
+            "group": "Savings & Deposits",
+            "pages": [
+              "savings/overview",
+              "savings/savings-domain-model",
+              "savings/savings-api-resources",
+              "savings/savings-write-services",
+              "savings/fixed-and-recurring-deposits",
+              "savings/interest-rate-charts",
+              "savings/savings-jobs"
+            ]
+          },
+          {
+            "group": "Accounting",
+            "pages": [
+              "accounting/overview",
+              "accounting/gl-accounts",
+              "accounting/journal-entries",
+              "accounting/product-to-account-mappings",
+              "accounting/accruals",
+              "accounting/closures-and-trial-balance",
+              "accounting/accounting-rules",
+              "accounting/provisioning",
+              "accounting/financial-activity-accounts"
+            ]
+          },
+          {
+            "group": "Clients, Groups & Organisation",
+            "pages": [
+              "portfolio/clients",
+              "portfolio/client-address-and-family",
+              "portfolio/groups-and-centers",
+              "portfolio/calendar-and-meetings",
+              "portfolio/collection-sheet",
+              "portfolio/notes-and-documents",
+              "portfolio/search",
+              "portfolio/account-transfers",
+              "portfolio/standing-instructions",
+              "portfolio/payment-types-and-details",
+              "portfolio/collateral-management",
+              "portfolio/funds-and-rates",
+              "organisation/offices-and-staff",
+              "organisation/tellers-and-cashiers",
+              "organisation/holidays-and-working-days",
+              "organisation/currencies"
+            ]
+          },
+          {
+            "group": "Products & Pricing Modules",
+            "pages": [
+              "products/charges",
+              "products/tax",
+              "products/floating-rates",
+              "products/share-products-and-accounts",
+              "products/product-mix"
+            ]
+          },
+          {
+            "group": "Investor & Asset Transfer",
+            "pages": [
+              "investor/overview",
+              "investor/external-asset-owners",
+              "investor/transfer-lifecycle",
+              "investor/investor-accounting",
+              "investor/delayed-settlement"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Platform Services",
+        "groups": [
+          {
+            "group": "Close of Business (COB)",
+            "pages": [
+              "cob/overview",
+              "cob/business-steps",
+              "cob/loan-cob-job",
+              "cob/loan-locking",
+              "cob/inline-cob",
+              "cob/cob-api"
+            ]
+          },
+          {
+            "group": "Batch Jobs & Scheduler",
+            "pages": [
+              "jobs/overview",
+              "jobs/scheduler",
+              "jobs/job-catalog",
+              "jobs/spring-batch-remote-partitioning",
+              "jobs/inline-jobs"
+            ]
+          },
+          {
+            "group": "Events & Messaging",
+            "pages": [
+              "events/overview",
+              "events/business-events",
+              "events/external-events",
+              "events/avro-schemas",
+              "events/kafka-and-jms"
+            ]
+          },
+          {
+            "group": "Reporting & Data Queries",
+            "pages": [
+              "reporting/overview",
+              "reporting/run-reports",
+              "reporting/datatables",
+              "reporting/report-mailing-jobs",
+              "reporting/adhoc-query",
+              "reporting/mix-reporting",
+              "reporting/spm-surveys"
+            ]
+          },
+          {
+            "group": "Communications & Integrations",
+            "pages": [
+              "integrations/overview",
+              "integrations/sms-campaigns",
+              "integrations/email-campaigns",
+              "integrations/notifications",
+              "integrations/webhooks",
+              "integrations/credit-bureau",
+              "integrations/interoperation",
+              "integrations/template-engine",
+              "integrations/document-store-and-s3",
+              "integrations/gcm-push"
+            ]
+          },
+          {
+            "group": "Client SDKs",
+            "pages": [
+              "sdk/fineract-client",
+              "sdk/fineract-client-feign",
+              "sdk/openapi-generation"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Reference",
+        "groups": [
+          {
+            "group": "Data Models",
+            "pages": [
+              "data-models/overview",
+              "data-models/client-and-group-entities",
+              "data-models/loan-entities",
+              "data-models/savings-entities",
+              "data-models/accounting-entities",
+              "data-models/organisation-entities",
+              "data-models/security-entities",
+              "data-models/command-and-audit-entities",
+              "data-models/job-and-event-entities"
+            ]
+          },
+          {
+            "group": "API Reference",
+            "pages": [
+              "api/overview",
+              "api/authentication-endpoints",
+              "api/client-endpoints",
+              "api/loan-endpoints",
+              "api/savings-endpoints",
+              "api/accounting-endpoints",
+              "api/organisation-endpoints",
+              "api/admin-endpoints",
+              "api/batch-and-jobs-endpoints",
+              "api/self-service-and-internal-endpoints"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "fineract-provider — Spring Boot application assembly, ServerApplication entry point, application.properties, COB loan steps, hooks, campaigns, credit bureau, surveys, SPM, templates",
+    "fineract-core — shared kernel: infrastructure.core (boot, config, API plumbing, serialization, exceptions, JPA), commands, batch API, jobs API, event framework, useradministration, organisation, portfolio base packages",
+    "fineract-security — tenant-aware authentication filters, basic auth, OAuth2, two-factor, platform security context",
+    "fineract-loan — loan domain model, transaction processors, schedule generators, delinquency, reschedule, guarantors",
+    "fineract-progressive-loan + fineract-progressive-loan-embeddable-schedule-generator — progressive loan schedule engine",
+    "fineract-loan-origination — loan originator module",
+    "fineract-working-capital-loan — working capital loan product, breach detection, COB",
+    "fineract-savings — savings, fixed deposit, recurring deposit accounts and interest rate charts",
+    "fineract-accounting — GL accounts, journal entries, accruals, closures, trial balance, rules, provisioning",
+    "fineract-investor — external asset owner transfers, investor accounting, delayed settlement",
+    "fineract-branch — tellers and cashiers (organisation.teller)",
+    "fineract-charge, fineract-tax, fineract-rates — charges, tax components/groups, floating rates",
+    "fineract-document — document management and content stores (filesystem/S3)",
+    "fineract-report — report engine (infrastructure.report)",
+    "fineract-mix — MIX taxonomy/XBRL reporting",
+    "fineract-cob — generic close-of-business batch framework: business steps, partitioning, tasklets, locking",
+    "fineract-command + jdbc/async/disruptor/audit variants — next-gen command dispatch framework",
+    "fineract-validation — bean validation constraints",
+    "fineract-avro-schemas — Avro schemas for external events (loan, savings, client, etc.)",
+    "fineract-client / fineract-client-feign — generated Java SDKs (Retrofit and Feign)",
+    "fineract-db — tenant first-time install SQL",
+    "fineract-war — WAR packaging",
+    "integration-tests, twofactor-tests, oauth2-tests — Java integration test suites",
+    "fineract-e2e-tests-core / fineract-e2e-tests-runner — Cucumber/Gherkin E2E suites",
+    "custom/ — dynamically discovered custom module pattern (custom/acme examples, custom docker image)",
+    "buildSrc — FineractPlugin Gradle release tooling (Jira, Confluence, GPG, SVN services)",
+    "docker-compose files for MariaDB/MySQL/PostgreSQL/ActiveMQ/Kafka/OAuth2/two-factor variants",
+    "kubernetes/ — deployment manifests",
+    "Multi-tenant architecture with tenant store + per-tenant Liquibase migrations",
+    "Maker-checker command pipeline with audit (m_portfolio_command_source)",
+    "Spring Batch remote partitioning for LOAN_COB via JMS/Kafka/Spring events",
+    "External event publishing with Avro serialization to Kafka/JMS"
+  ],
+  "publicApiSurface": [
+    "org.apache.fineract.ServerApplication (fineract-provider) — Spring Boot entry point",
+    "165 JAX-RS *ApiResource classes under /api/v1 (LoansApiResource, ClientsApiResource, SavingsAccountsApiResource, JournalEntriesApiResource, UsersApiResource, ...)",
+    "AuthenticationApiResource — POST /authentication",
+    "BatchApiResource — POST /batches",
+    "CommandWrapperBuilder + PortfolioCommandSourceWritePlatformService — command write path",
+    "SchedulerJobApiResource / InlineJobApiResource — job management endpoints",
+    "InteropApiResource — Mojaloop-style interoperation API",
+    "RunreportsApiResource / DatatablesApiResource — reporting and dynamic data tables",
+    "fineract-client FineractClient (Retrofit SDK), fineract-client-feign (Feign SDK)",
+    "fineract-avro-schemas *.avsc — external event payload contracts",
+    "application.properties FINERACT_* environment variables",
+    "docker-compose.yml / kubernetes manifests — deployment entry points"
+  ]
+}
